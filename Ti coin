@@ -1,0 +1,21 @@
+```
+// Import the CoinImp API library
+const CoinImp = require('coinimp');
+// Set your API key and pool ID
+const apiKey = 'YOUR_API_KEY';
+const poolId = 'YOUR_POOL_ID';
+// Initialize the CoinImp API
+const ci = new CoinImp(apiKey, poolId);
+// Get the user's wallet address
+const walletAddress = 'USER_WALLET_ADDRESS';
+// Start mining
+ci.startMining(walletAddress, (hashRate, totalCoins) => {
+  console.log(`Hash Rate: ${hashRate} H/s`);
+  console.log(`Total Coins: ${totalCoins}`);
+});
+// Stop mining
+ci.stopMining();
+// Get mining statistics
+ci.getStats((stats) => {
+  console.log(stats);
+});
