@@ -1,0 +1,2 @@
+# Ticoin
+App
